@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogul meu de Călătorii</title>
+    <link rel="stylesheet" href="style.css"> <!-- Adaugă fișierul CSS aici -->
+</head>
+<body>
+
+<header>
+    <h1>Blogul meu de Călătorii</h1>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Acasă</a></li>
+            <li><a href="Destinatii.html">Destinații</a></li>
+            <li><a href="DespreMine.html">Despre Mine</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="LoginPage.html">Înregistrare/Login</a></li> <!-- Păstrăm link-ul pentru login -->
+        </ul>
+    </nav>
+</header>
+
+<section id="produse">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Images/plane.jpg" style="width:100%" alt="Imagine 1">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="Images/cityscape_trip.jpg" style="width:100%" alt="Imagine 2">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="Images/beach_trip.jpg" style="width:100%" alt="Imagine 3">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</section>
+
+<section id="content">
+    <h2>Bine ați venit pe blogul meu de călătorii!</h2>
+    <p>În acest blog, veți descoperi cele mai frumoase locuri de vizitat, destinații și experiențe uimitoare.</p>
+
+    <!-- Mesajul de bun venit pentru utilizator -->
+    <h3 id="welcome-message"></h3>
+</section>
+
+<footer>
+    <p>&copy; 2024 Blogul meu de Călătorii. Toate drepturile rezervate.</p>
+    <div class="social-media-links">
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+<script>
+  // Afișează un mesaj de bun venit dacă utilizatorul este autentificat
+  document.addEventListener('DOMContentLoaded', () => {
+    const username = localStorage.getItem('username'); // Obține numele utilizatorului din localStorage
+    const welcomeMessage = document.getElementById('welcome-message');
+    
+    if (username) {
+      welcomeMessage.textContent = `Bun venit, ${username}!`; // Mesaj de bun venit
+    } else {
+      welcomeMessage.textContent = 'Bun venit, vizitator!'; // Dacă utilizatorul nu este autentificat
+    }
+  });
+</script>
+
+</body>
+</html>
