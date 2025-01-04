@@ -245,3 +245,41 @@ button:hover {
 .destinatie-info a:hover {
     text-decoration: underline;
 }
+
+/* Secțiunea utilizator conectat */
+#loggedInMessage {
+    text-align: center;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient similar cu tema generală */
+    padding: 20px;
+    border-radius: 12px; /* Colțuri rotunjite */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Umbre pentru efect de ridicare */
+    color: #fff; /* Text alb pentru contrast */
+    transition: transform 0.3s ease; /* Efect de animație la hover */
+}
+
+#loggedInMessage:hover {
+    transform: translateY(-5px); /* Efect de ridicare la hover */
+}
+
+#loggedInMessage p {
+    font-size: 18px;
+    margin-bottom: 15px; /* Spațiu între text și buton */
+    font-weight: bold;
+}
+
+#loggedInMessage button {
+    background: #f39c12; /* Culoare vibrantă pentru buton */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#loggedInMessage button:hover {
+    background: #e67e22; /* Schimbare ușoară la hover */
+    transform: scale(1.05); /* Ușor efect de mărire */
+}

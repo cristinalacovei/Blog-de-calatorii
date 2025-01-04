@@ -6,6 +6,7 @@
     <title>Autentificare</title>
     <link rel="stylesheet" href="style.css"> <!-- Adaugă fișierul CSS aici -->
 </head>
+<script src="script.js"></script>
 <body>
 
 <header>
@@ -49,6 +50,12 @@
         <button type="submit">Autentificare</button>
     </form>
 </section>
+
+<section id="loggedInMessage" style="display: none;">
+    <p id="welcomeMessage">Ești conectat ca <span id="usernameDisplay"></span></p>
+    <button onclick="logoutUser()">Logout</button>
+</section>
+
 
 <footer>
     <p>&copy; 2024 Magazinul de Animale. Toate drepturile rezervate.</p>
