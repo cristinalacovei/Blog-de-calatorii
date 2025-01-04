@@ -6,57 +6,101 @@ body, h1, h2, p, ul, li {
 
 /* Stiluri generale */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e4e8ed); /* Gradient de fundal luminos */
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #1a1a1a;
+    background: linear-gradient(90deg, #3498db, #8e44ad); /* Gradient cu culori reci */
     color: #fff;
-    padding: 15px;
+    padding: 30px;
     text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f39c12; /* Culoare vibrantă pentru hover */
+    transform: scale(1.1); /* Efect de mărire la hover */
 }
 
 section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px); /* Efect de ridicare la hover */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #1a1a1a;
     color: #fff;
+    margin-top: 30px;
+}
+
+footer .social-media-links {
+    margin-top: 15px;
+}
+
+footer .social-media-links a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e67e22; /* Portocaliu vibrant pentru butoane sociale */
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-media-links a:hover {
+    background-color: #f39c12; /* Efect de hover pe fundalul butoanelor sociale */
+    transform: scale(1.05); /* Efect de mărire la hover */
 }
 
 /* Stiluri pentru slideshow */
 .slideshow-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
     position: relative;
+    text-align: center;
+    overflow: hidden; /* Previne depășirea imaginii */
+    border-radius: 12px; /* Colțuri rotunjite pentru slideshow */
 }
 
 .mySlides {
@@ -65,60 +109,139 @@ footer {
 
 img {
     width: 100%;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 }
 
+img:hover {
+    transform: scale(1.05); /* Efect de zoom pe imagini la hover */
+}
+
+/* Stiluri pentru link-urile de social media */
 .social-media-links {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .social-media-links a {
-    display: inline-block;
-    margin-right: 10px;
-    text-decoration: none;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .social-media-links a:hover {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #f39c12;
+    transform: scale(1.05); /* Efect de mărire pe hover */
 }
 
 /* Stiluri pentru formulare */
 section form {
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
+    padding: 14px;
+    margin-bottom: 20px;
     box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db; /* Culoare de focus pentru input */
+    outline: none;
 }
 
 button {
     background-color: #3498db;
     color: #fff;
-    padding: 10px;
+    padding: 14px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Culoare de hover pentru buton */
+    transform: scale(1.05); /* Efect de mărire la hover */
+}
+
+/* Efecte responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    section {
+        max-width: 100%;
+        margin: 15px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+/* Stiluri pentru secțiunea destinatii */
+#destinatii {
+    margin-top: 30px; /* Adăugăm un spațiu între header și secțiunea destinatii */
+}
+
+.destinatie {
+    display: flex;
+    margin-bottom: 40px; /* Adăugăm spațiu între fiecare destinatie */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.destinatie-img {
+    width: 100%;
+    max-width: 300px; /* Poți ajusta dimensiunea imaginii pentru a arăta mai bine */
+    margin-right: 20px; /* Adăugăm un spațiu între imagine și text */
+    border-radius: 8px; /* Colțuri rotunjite pentru imagini */
+}
+
+.destinatie-info {
+    flex: 1; /* Permite textului să ocupe spațiu rămas */
+}
+
+.destinatie-info h3 {
+    margin-bottom: 10px; /* Un pic mai mult spațiu sub titlu */
+}
+
+.destinatie-info p {
+    margin-bottom: 10px; /* Spațiu între paragrafe */
+}
+
+.destinatie-info a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.destinatie-info a:hover {
+    text-decoration: underline;
 }
